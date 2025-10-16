@@ -1,23 +1,23 @@
 # Boilerplate on top of vite react-ts
 
-1. [pnpm](https://pnpm.io/) - package manager
-2. [ofetch](https://github.com/unjs/ofetch) - api wrapper
-3. [vitest](https://vitest.dev/) - testing
-4. nvmrc for node version
+- [pnpm](https://pnpm.io/) - package manager
+- [ofetch](https://github.com/unjs/ofetch) - api wrapper
+- [vitest](https://vitest.dev/) - testing
+- nvmrc for node version
 
-| axios is bloted and have global defaults which can be used in wrong way, its better to create new instance for different api)
+| axios is bloted and have global defaults which can be used in wrong way, its better to create new instance for different api
 
 ## Additional Eslint rules
 
-1. [eslint-plugin-react-you-might-not-need-an-effect](https://github.com/NickvanDyke/eslint-plugin-react-you-might-not-need-an-effect)
-2. [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend)
-3. [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest)
+- [eslint-plugin-react-you-might-not-need-an-effect](https://github.com/NickvanDyke/eslint-plugin-react-you-might-not-need-an-effect)
+- [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend)
+- [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest)
 
 ## Future suggestion
 
-1. [react-query](https://tanstack.com/query/latest/docs/framework/react/overview) - data fetching
-2. [zustand](https://github.com/pmndrs/zustand) - state managment
-3. [mantine](https://github.com/mantinedev/mantine) - component library
+- [react-query](https://tanstack.com/query/latest/docs/framework/react/overview) - data fetching
+- [zustand](https://github.com/pmndrs/zustand) - state managment
+- [mantine](https://github.com/mantinedev/mantine) - component library
 
 ## References
 
