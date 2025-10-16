@@ -19,7 +19,7 @@
 2. [zustand](https://github.com/pmndrs/zustand) - state managment
 3. [mantine](https://github.com/mantinedev/mantine) - component library
 
-## Refferences
+## References
 
 [Why I Won’t Use JSDOM | Epic Web Dev](https://www.epicweb.dev/why-i-won-t-use-jsdom)
 
