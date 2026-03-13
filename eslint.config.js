@@ -8,6 +8,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import reactYouMightNotNeedAnEffect from "eslint-plugin-react-you-might-not-need-an-effect";
 import depend from "eslint-plugin-depend";
 import vitest from "@vitest/eslint-plugin";
+import pluginQuery from "@tanstack/eslint-plugin-query";
 
 export default defineConfig([
   globalIgnores(["dist"]),
@@ -29,5 +30,6 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  ...pluginQuery.configs["flat/recommended"],
   reactYouMightNotNeedAnEffect.configs.recommended,
 ]);
