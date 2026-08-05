@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 import { render } from "vitest-browser-react";
-import App from "../src/App";
+import App from "./App";
 
 test("renders name", async () => {
   const { getByText, getByRole } = await render(<App name="Vitest" />);

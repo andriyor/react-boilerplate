@@ -9,6 +9,7 @@ import reactYouMightNotNeedAnEffect from "eslint-plugin-react-you-might-not-need
 import depend from "eslint-plugin-depend";
 import vitest from "@vitest/eslint-plugin";
 import pluginQuery from "@tanstack/eslint-plugin-query";
+import importAlias from "@dword-design/eslint-plugin-import-alias";
 
 export default defineConfig([
   globalIgnores(["dist"]),
@@ -24,6 +25,7 @@ export default defineConfig([
       reactHooks.configs.flat["recommended-latest"],
       reactRefresh.configs.vite,
       "depend/flat/recommended",
+      importAlias.configs.recommended,
     ],
     languageOptions: {
       ecmaVersion: 2020,

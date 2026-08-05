@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { example, get } from "../api";
+import { example, get } from "@/api";
 
 export const DataFetching = () => {
   const { data: exampleData } = useQuery({
