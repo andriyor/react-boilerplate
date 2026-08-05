@@ -32,6 +32,15 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  {
+    files: ["**/*.tsx"],
+    rules: {
+      "max-lines-per-function": [
+        "warn",
+        { max: 150, skipBlankLines: true, skipComments: true, IIFEs: true },
+      ],
+    },
+  },
   ...pluginQuery.configs["flat/recommended"],
   reactYouMightNotNeedAnEffect.configs.recommended,
 ]);
