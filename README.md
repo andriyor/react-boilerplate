@@ -7,11 +7,20 @@
 
 | axios is bloted and have global defaults which can be used in wrong way, its better to create new instance for different api
 
-## Additional Eslint rules
+## Linting
+
+[oxlint](https://oxc.rs/docs/guide/usage/linter) (`pnpm lint`), configured in `oxlint.config.ts`.
+`pnpm lint` applies safe fixes; `pnpm lint:fix-dangerously` also applies fixes that can
+change behavior (e.g. deleting an unused declaration), so review the diff after running it.
+
+Native oxlint plugins: `typescript`, `react`, `import`, `vitest` (the vitest
+`recommended` set, scoped to `*.spec.*` / `*.test.*` files).
+
+Rules from these ESLint plugins are loaded through oxlint's `jsPlugins`:
 
 - [eslint-plugin-react-you-might-not-need-an-effect](https://github.com/NickvanDyke/eslint-plugin-react-you-might-not-need-an-effect)
 - [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend)
-- [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest)
+- [@tanstack/eslint-plugin-query](https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query)
 
 ## Future suggestion
 
@@ -39,63 +48,7 @@ Currently, two official plugins are available:
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## Expanding the lint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+For type-aware rules, install [`oxlint-tsgolint`](https://oxc.rs/docs/guide/usage/linter/type-aware) and run `oxlint --type-aware`.
+Additional rule categories (`suspicious`, `pedantic`, `perf`, `style`) can be enabled via `categories` in `oxlint.config.ts`.
