@@ -32,7 +32,6 @@ Rules from these ESLint plugins are loaded through oxlint's `jsPlugins`:
 
 [Why I Won’t Use JSDOM | Epic Web Dev](https://www.epicweb.dev/why-i-won-t-use-jsdom)
 
-
 ============================
 
 # React + TypeScript + Vite

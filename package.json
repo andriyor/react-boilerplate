@@ -1,13 +1,15 @@
 {
   "name": "react-boilerplate",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint --fix",
     "lint:fix-dangerously": "oxlint --fix-dangerously",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "preview": "vite preview",
     "test": "vitest run --coverage"
   },
@@ -27,9 +29,9 @@
     "@vitest/coverage-v8": "^4.1.11",
     "eslint-plugin-depend": "^1.5.0",
     "eslint-plugin-react-you-might-not-need-an-effect": "^1.0.1",
+    "oxfmt": "^0.66.0",
     "oxlint": "^1.81.0",
     "playwright": "^1.62.1",
-    "prettier": "3.9.6",
     "typescript": "~7.0.2",
     "vite": "^8.2.0",
     "vitest": "^4.1.11",
