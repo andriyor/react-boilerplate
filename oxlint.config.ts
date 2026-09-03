@@ -1,6 +1,6 @@
 import { defineConfig } from "oxlint";
 import pluginQuery from "@tanstack/eslint-plugin-query";
-import depend from "eslint-plugin-depend";
+import e18e from "@e18e/eslint-plugin";
 import youMightNotNeedAnEffect from "eslint-plugin-react-you-might-not-need-an-effect";
 
 type Rules = Record<string, unknown>;
@@ -14,7 +14,7 @@ export default defineConfig({
   plugins: ["typescript", "react", "import", "vitest"],
   jsPlugins: [
     "@tanstack/eslint-plugin-query",
-    "eslint-plugin-depend",
+    "@e18e/eslint-plugin",
     "eslint-plugin-react-you-might-not-need-an-effect",
   ],
   // Enables oxlint's whole `correctness` category; the rules below are the ones
@@ -54,7 +54,7 @@ export default defineConfig({
     "react/incompatible-library": "warn",
 
     // plugin presets, read straight from each plugin
-    ...preset(depend.configs?.["flat/recommended"]),
+    ...preset(e18e.configs.recommended),
     ...preset(pluginQuery.configs["flat/recommended"]),
     ...preset(youMightNotNeedAnEffect.configs.recommended),
   },

@@ -20,6 +20,7 @@
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
+    "@e18e/eslint-plugin": "^0.8.0",
     "@tanstack/eslint-plugin-query": "^5.101.4",
     "@types/node": "^26.1.2",
     "@types/react": "^19.2.18",
@@ -27,7 +28,6 @@
     "@vitejs/plugin-react": "^6.0.5",
     "@vitest/browser-playwright": "^4.1.11",
     "@vitest/coverage-v8": "^4.1.11",
-    "eslint-plugin-depend": "^1.5.0",
     "eslint-plugin-react-you-might-not-need-an-effect": "^1.0.1",
     "oxfmt": "^0.66.0",
     "oxlint": "^1.81.0",
