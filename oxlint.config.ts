@@ -14,8 +14,12 @@ const preset = (config: ShareableConfig | undefined): Rules =>
 // importable from "oxlint"). Once shipped, most of the hand-listed rules below
 // can be replaced by extending those presets.
 // Watch https://github.com/oxc-project/oxc/issues/20758
+//
+// TODO: oxlint only lints JS/TS today. Once JSON and YAML files are supported,
+// they can be linted here too instead of needing a separate tool.
+// Watch https://github.com/oxc-project/oxc/issues/18656
 export default defineConfig({
-  plugins: ["typescript", "react", "import", "vitest"],
+  plugins: ["typescript", "react", "import", "vitest", "oxc"],
   jsPlugins: [
     "@tanstack/eslint-plugin-query",
     "@e18e/eslint-plugin",
@@ -47,6 +51,7 @@ export default defineConfig({
     "react/only-export-components": ["error", { allowConstantExport: true }],
     "react/unsupported-syntax": "warn",
     "import/no-relative-parent-imports": "error",
+    "oxc/no-barrel-file": "error",
 
     // suspicious
     "no-unexpected-multiline": "error",
