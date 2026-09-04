@@ -10,6 +10,10 @@ type ShareableConfig = { rules?: Rules } | { rules?: Rules }[];
 const preset = (config: ShareableConfig | undefined): Rules =>
   Object.assign({}, ...[config ?? []].flat().map((c) => c.rules ?? {}));
 
+// TODO: oxlint is adding opt-in `recommended` presets (exported config objects
+// importable from "oxlint"). Once shipped, most of the hand-listed rules below
+// can be replaced by extending those presets.
+// Watch https://github.com/oxc-project/oxc/issues/20758
 export default defineConfig({
   plugins: ["typescript", "react", "import", "vitest"],
   jsPlugins: [
