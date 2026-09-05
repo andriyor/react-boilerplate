@@ -30,6 +30,7 @@
     "@vitest/coverage-v8": "^4.1.11",
     "oxfmt": "^0.66.0",
     "oxlint": "^1.81.0",
+    "oxlint-tsgolint": "^7.0.2001",
     "playwright": "^1.62.1",
     "typescript": "~7.0.2",
     "vite": "^8.2.0",
