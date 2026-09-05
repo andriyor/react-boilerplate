@@ -124,7 +124,7 @@ importers:
     devDependencies:
       '@andriyor/oxlint-config':
         specifier: github:andriyor/oxlint-config
-        version: https://codeload.github.com/andriyor/oxlint-config/tar.gz/cf9d6d86870261c6f7f1174118683787a25b34c6(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)(supports-color@7.2.0)(typescript@7.0.2)
+        version: https://codeload.github.com/andriyor/oxlint-config/tar.gz/cbfaf4fdac5a514f7eb9855b0f95555e4aa1740d(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)(supports-color@7.2.0)(typescript@7.0.2)
       '@types/node':
         specifier: ^26.1.2
         version: 26.4.1
@@ -167,9 +167,9 @@ importers:
 
 packages:
 
-  '@andriyor/oxlint-config@https://codeload.github.com/andriyor/oxlint-config/tar.gz/cf9d6d86870261c6f7f1174118683787a25b34c6':
-    resolution: {gitHosted: true, integrity: sha512-qWXZVjiPS+7XHrzrK0/3IBfI1zV8ftXq/Ogd41175Mw+z0JAKyv0ax6Bcc9MIwpMhFA/yquj/v7uj8WoRdGeMw==, tarball: https://codeload.github.com/andriyor/oxlint-config/tar.gz/cf9d6d86870261c6f7f1174118683787a25b34c6}
-    version: 0.1.1
+  '@andriyor/oxlint-config@https://codeload.github.com/andriyor/oxlint-config/tar.gz/cbfaf4fdac5a514f7eb9855b0f95555e4aa1740d':
+    resolution: {gitHosted: true, integrity: sha512-uP8vK5CSKIL3RzANGje4nXmkkZJ9Ot6rTXMqNg7yl0yj7Ymp11SOGEkep6zUj1RcASVp7NtMSqc/0gTEuIG4aQ==, tarball: https://codeload.github.com/andriyor/oxlint-config/tar.gz/cbfaf4fdac5a514f7eb9855b0f95555e4aa1740d}
+    version: 0.2.0
     peerDependencies:
       oxlint: ^1.81.0
 
@@ -1558,7 +1558,7 @@ packages:
 
 snapshots:
 
-  '@andriyor/oxlint-config@https://codeload.github.com/andriyor/oxlint-config/tar.gz/cf9d6d86870261c6f7f1174118683787a25b34c6(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)(supports-color@7.2.0)(typescript@7.0.2)':
+  '@andriyor/oxlint-config@https://codeload.github.com/andriyor/oxlint-config/tar.gz/cbfaf4fdac5a514f7eb9855b0f95555e4aa1740d(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)(supports-color@7.2.0)(typescript@7.0.2)':
     dependencies:
       '@e18e/eslint-plugin': 0.8.0(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)
       '@tanstack/eslint-plugin-query': 5.102.8(eslint@10.9.1(supports-color@7.2.0))(supports-color@7.2.0)(typescript@7.0.2)
