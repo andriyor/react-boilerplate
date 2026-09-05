@@ -122,12 +122,9 @@ importers:
         specifier: ^19.2.8
         version: 19.2.8(react@19.2.8)
     devDependencies:
-      '@e18e/eslint-plugin':
-        specifier: ^0.8.0
-        version: 0.8.0(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)
-      '@tanstack/eslint-plugin-query':
-        specifier: ^5.101.4
-        version: 5.102.8(eslint@10.9.1(supports-color@7.2.0))(supports-color@7.2.0)(typescript@7.0.2)
+      '@andriyor/oxlint-config':
+        specifier: github:andriyor/oxlint-config
+        version: https://codeload.github.com/andriyor/oxlint-config/tar.gz/a94279be6b87ad652f9173f35cbda187c73d6348(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)(supports-color@7.2.0)(typescript@7.0.2)
       '@types/node':
         specifier: ^26.1.2
         version: 26.4.1
@@ -146,18 +143,12 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^4.1.11
         version: 4.1.11(@vitest/browser@4.1.11)(vitest@4.1.11)
-      eslint-plugin-react-you-might-not-need-an-effect:
-        specifier: ^1.0.1
-        version: 1.0.2(eslint@10.9.1(supports-color@7.2.0))
       oxfmt:
         specifier: ^0.66.0
         version: 0.66.0
       oxlint:
         specifier: ^1.81.0
         version: 1.81.0
-      oxlint-config-presets:
-        specifier: ^0.1.19
-        version: 0.1.19(oxlint@1.81.0)
       playwright:
         specifier: ^1.62.1
         version: 1.62.1
@@ -175,6 +166,12 @@ importers:
         version: 2.2.0(@types/react-dom@19.2.5(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.11)
 
 packages:
+
+  '@andriyor/oxlint-config@https://codeload.github.com/andriyor/oxlint-config/tar.gz/a94279be6b87ad652f9173f35cbda187c73d6348':
+    resolution: {gitHosted: true, integrity: sha512-CdK/X5OBCV8ijawiY2Jdz91AHVEzcUMFE/DvHzwyWoYaB6OtZLbicP9T0ah+3jZq4ya/rZE+5DCVXsx9qUf4Yg==, tarball: https://codeload.github.com/andriyor/oxlint-config/tar.gz/a94279be6b87ad652f9173f35cbda187c73d6348}
+    version: 0.1.0
+    peerDependencies:
+      oxlint: ^1.81.0
 
   '@babel/helper-string-parser@7.29.7':
     resolution: {integrity: sha512-Pb5ijPrZ89GDH8223L4UP8i6QApWxs04RbPQJTeWDV0/keR2E36MeKnyr6LYmUUvqRRI+Iv87SuF1W6ErINzYw==}
@@ -237,8 +234,8 @@ packages:
     resolution: {integrity: sha512-vqTaUEgxzm+YDSdElad6PiRoX4t8VGDjCtt05zn4nU810UIx/uNEV7/lZJ6KwFThKZOzOxzXy48da+No7HZaMw==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/plugin-kit@0.7.2':
-    resolution: {integrity: sha512-+CNAzxglkrpNf/kKywqQfk74QjtceuOE7Qm+AF8miRvPF/wmmK5+OJOgVh3AVTT3RP2mH3+FOaxlE5v72owk0A==}
+  '@eslint/plugin-kit@0.7.3':
+    resolution: {integrity: sha512-IkO+/KEUvwbVpiURZg+P7zF74z5Jxe0UgJxVni+RtoHQ6IZieXaO02kmadomap/q+l6bc/jdPGGqTjhuZnuz1Q==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   '@humanfs/core@0.19.2':
@@ -1561,6 +1558,18 @@ packages:
 
 snapshots:
 
+  '@andriyor/oxlint-config@https://codeload.github.com/andriyor/oxlint-config/tar.gz/a94279be6b87ad652f9173f35cbda187c73d6348(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)(supports-color@7.2.0)(typescript@7.0.2)':
+    dependencies:
+      '@e18e/eslint-plugin': 0.8.0(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)
+      '@tanstack/eslint-plugin-query': 5.102.8(eslint@10.9.1(supports-color@7.2.0))(supports-color@7.2.0)(typescript@7.0.2)
+      eslint-plugin-react-you-might-not-need-an-effect: 1.0.2(eslint@10.9.1(supports-color@7.2.0))
+      oxlint: 1.81.0
+      oxlint-config-presets: 0.1.19(oxlint@1.81.0)
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
+
   '@babel/helper-string-parser@7.29.7': {}
 
   '@babel/helper-validator-identifier@7.29.7': {}
@@ -1612,7 +1621,7 @@ snapshots:
 
   '@eslint/object-schema@3.0.5': {}
 
-  '@eslint/plugin-kit@0.7.2':
+  '@eslint/plugin-kit@0.7.3':
     dependencies:
       '@eslint/core': 1.2.1
       levn: 0.4.1
@@ -2133,7 +2142,7 @@ snapshots:
       '@eslint/config-array': 0.23.5(supports-color@7.2.0)
       '@eslint/config-helpers': 0.7.0
       '@eslint/core': 1.2.1
-      '@eslint/plugin-kit': 0.7.2
+      '@eslint/plugin-kit': 0.7.3
       '@humanfs/node': 0.16.8
       '@humanwhocodes/module-importer': 1.0.1
       '@humanwhocodes/retry': 0.4.3
