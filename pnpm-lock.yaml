@@ -124,7 +124,7 @@ importers:
     devDependencies:
       '@andriyor/oxlint-config':
         specifier: github:andriyor/oxlint-config
-        version: https://codeload.github.com/andriyor/oxlint-config/tar.gz/b8fc2bc78c1ea456f7a86652996d7bbc595b9bb1(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)(supports-color@7.2.0)(typescript@7.0.2)
+        version: https://codeload.github.com/andriyor/oxlint-config/tar.gz/1a923e9b57b8217f954c09a8e30f33eb4287c869(eslint@10.9.1(supports-color@7.2.0))(oxlint-tsgolint@7.0.2001)(oxlint@1.81.0(oxlint-tsgolint@7.0.2001))(supports-color@7.2.0)(typescript@7.0.2)
       '@types/node':
         specifier: ^26.1.2
         version: 26.4.1
@@ -148,7 +148,10 @@ importers:
         version: 0.66.0
       oxlint:
         specifier: ^1.81.0
-        version: 1.81.0
+        version: 1.81.0(oxlint-tsgolint@7.0.2001)
+      oxlint-tsgolint:
+        specifier: ^7.0.2001
+        version: 7.0.2001
       playwright:
         specifier: ^1.62.1
         version: 1.62.1
@@ -167,11 +170,12 @@ importers:
 
 packages:
 
-  '@andriyor/oxlint-config@https://codeload.github.com/andriyor/oxlint-config/tar.gz/b8fc2bc78c1ea456f7a86652996d7bbc595b9bb1':
-    resolution: {gitHosted: true, integrity: sha512-dFQ7pcnclQz9cwRP1Wj3XXxUj/eKIpUitERpoRoivcgDiUYkwwtX+gwpSvWPO1qQtoIgs0iryrVyPb8/DiXYAA==, tarball: https://codeload.github.com/andriyor/oxlint-config/tar.gz/b8fc2bc78c1ea456f7a86652996d7bbc595b9bb1}
-    version: 0.3.0
+  '@andriyor/oxlint-config@https://codeload.github.com/andriyor/oxlint-config/tar.gz/1a923e9b57b8217f954c09a8e30f33eb4287c869':
+    resolution: {gitHosted: true, integrity: sha512-Kzs6JM1W5k4w7E4TUPD8SgtazfrMdaI6zuWx9EN5DmM8VvmgjroAdQcetimXSycvnQlmg5IbtjqaY778Vd+dbg==, tarball: https://codeload.github.com/andriyor/oxlint-config/tar.gz/1a923e9b57b8217f954c09a8e30f33eb4287c869}
+    version: 0.4.0
     peerDependencies:
       oxlint: ^1.81.0
+      oxlint-tsgolint: ^7.0.2001
 
   '@babel/helper-string-parser@7.29.7':
     resolution: {integrity: sha512-Pb5ijPrZ89GDH8223L4UP8i6QApWxs04RbPQJTeWDV0/keR2E36MeKnyr6LYmUUvqRRI+Iv87SuF1W6ErINzYw==}
@@ -251,11 +255,11 @@ packages:
     engines: {node: '>=18.18.0'}
 
   '@humanwhocodes/module-importer@1.0.1':
-    resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==, tarball: https://gdartifactory1.jfrog.io/artifactory/api/npm/node-virt/@humanwhocodes/module-importer/-/humanwhocodes-module-importer-1.0.1.tgz}
+    resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
     engines: {node: '>=12.22'}
 
   '@humanwhocodes/retry@0.4.3':
-    resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==, tarball: https://gdartifactory1.jfrog.io/artifactory/api/npm/node-virt/@humanwhocodes/retry/-/humanwhocodes-retry-0.4.3.tgz}
+    resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
   '@jridgewell/resolve-uri@3.1.2':
@@ -390,6 +394,36 @@ packages:
   '@oxfmt/binding-win32-x64-msvc@0.66.0':
     resolution: {integrity: sha512-bwTQcv/JVRPkOqQtMF0X7vpvpncDQiBcXHxZ9S2hR12Hlo8bvBdUR5x5XnxzDZ3kM0qoZw1rv7KaD66Ly+pFWA==}
     engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [win32]
+
+  '@oxlint-tsgolint/darwin-arm64@7.0.2001':
+    resolution: {integrity: sha512-CUJEdbSZ54+Xy9OXqOhWLTKZKV0BBiV7C2i/ygyVmXtkUNXx5YCzN8DpSSshTAKktoL7S+tnQ/ftFG/i7X896w==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@oxlint-tsgolint/darwin-x64@7.0.2001':
+    resolution: {integrity: sha512-pXfBb5BqONCcgrXQNUZWXgiYmRSWJzd97S8i41VVOh6ut0tyo+cJ5FKFpczDHxiVNfj/3e7c9B4MtztNdpIVCw==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@oxlint-tsgolint/linux-arm64@7.0.2001':
+    resolution: {integrity: sha512-roP7zujb/QDPzDwEKsFFpzNHHy91/Y7oX9vQXk78ekyZtcQj1QXDIMH33gjDdHBfRl4K9pZ36xhRgrP4Zr+R8A==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@oxlint-tsgolint/linux-x64@7.0.2001':
+    resolution: {integrity: sha512-UDezNqdECVmngu2TPnjaS1YoAmcTaBoI5lV9vk3VahBxoi+I5r9k3iJTT7qZoYWOXTD/7T7bNcwRgrocR6BscQ==}
+    cpu: [x64]
+    os: [linux]
+
+  '@oxlint-tsgolint/win32-arm64@7.0.2001':
+    resolution: {integrity: sha512-uJZhqB6pdXLuN+AD1F5082byyQti/NPmJA77GtcFlmT2HzRelqbNls3SaIqxpjdFgvSBF9g0yOKGBkGFg7kX8Q==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@oxlint-tsgolint/win32-x64@7.0.2001':
+    resolution: {integrity: sha512-FkDRm8hx9OwzGQqyWG1tO5QrTLRApff9DzSgpz9QZau37BR8d1VYKOxMLGf6shPZntJFoTwIIJYT68VndYDCog==}
     cpu: [x64]
     os: [win32]
 
@@ -650,7 +684,7 @@ packages:
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
 
   '@types/json-schema@7.0.15':
-    resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==, tarball: https://gdartifactory1.jfrog.io/artifactory/api/npm/node-virt/@types/json-schema/-/types-json-schema-7.0.15.tgz}
+    resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
   '@types/node@26.4.1':
     resolution: {integrity: sha512-k97ENvZWtvA6yqz5/FS6a7duDgOPEeOQOc2iKS/nY6mX6qJUKtLnWzQS+Xj6tXweyj6ZcTAK2Qecetnvi9nCLA==}
@@ -1265,6 +1299,10 @@ packages:
       oxlint:
         optional: true
 
+  oxlint-tsgolint@7.0.2001:
+    resolution: {integrity: sha512-KjK/XLcXr1DSyonKhsuFqJRiuKqcyG9j3LJ8nkOsrLzGvodBPqzHOKauy10asLMDI0sUpvb+1sxlzff3udZvfg==}
+    hasBin: true
+
   oxlint@1.81.0:
     resolution: {integrity: sha512-HyrJYqeoOCL0iqaLEzGewGT48ZX99P3hxYh8udAF9RGGIghSamkXE4ClUyBpEDNqasamThgmlPbuMOe7SAZmHg==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -1558,13 +1596,14 @@ packages:
 
 snapshots:
 
-  '@andriyor/oxlint-config@https://codeload.github.com/andriyor/oxlint-config/tar.gz/b8fc2bc78c1ea456f7a86652996d7bbc595b9bb1(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)(supports-color@7.2.0)(typescript@7.0.2)':
+  '@andriyor/oxlint-config@https://codeload.github.com/andriyor/oxlint-config/tar.gz/1a923e9b57b8217f954c09a8e30f33eb4287c869(eslint@10.9.1(supports-color@7.2.0))(oxlint-tsgolint@7.0.2001)(oxlint@1.81.0(oxlint-tsgolint@7.0.2001))(supports-color@7.2.0)(typescript@7.0.2)':
     dependencies:
-      '@e18e/eslint-plugin': 0.8.0(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)
+      '@e18e/eslint-plugin': 0.8.0(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0(oxlint-tsgolint@7.0.2001))
       '@tanstack/eslint-plugin-query': 5.102.8(eslint@10.9.1(supports-color@7.2.0))(supports-color@7.2.0)(typescript@7.0.2)
       eslint-plugin-react-you-might-not-need-an-effect: 1.0.2(eslint@10.9.1(supports-color@7.2.0))
-      oxlint: 1.81.0
-      oxlint-config-presets: 0.1.19(oxlint@1.81.0)
+      oxlint: 1.81.0(oxlint-tsgolint@7.0.2001)
+      oxlint-config-presets: 0.1.19(oxlint@1.81.0(oxlint-tsgolint@7.0.2001))
+      oxlint-tsgolint: 7.0.2001
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -1587,14 +1626,14 @@ snapshots:
 
   '@blazediff/core@1.9.1': {}
 
-  '@e18e/eslint-plugin@0.8.0(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0)':
+  '@e18e/eslint-plugin@0.8.0(eslint@10.9.1(supports-color@7.2.0))(oxlint@1.81.0(oxlint-tsgolint@7.0.2001))':
     dependencies:
       empathic: 2.0.1
       module-replacements: 3.3.0
       semver: 7.8.5
     optionalDependencies:
       eslint: 10.9.1(supports-color@7.2.0)
-      oxlint: 1.81.0
+      oxlint: 1.81.0(oxlint-tsgolint@7.0.2001)
 
   '@eslint-community/eslint-utils@4.10.1(eslint@10.9.1(supports-color@7.2.0))':
     dependencies:
@@ -1708,6 +1747,24 @@ snapshots:
     optional: true
 
   '@oxfmt/binding-win32-x64-msvc@0.66.0':
+    optional: true
+
+  '@oxlint-tsgolint/darwin-arm64@7.0.2001':
+    optional: true
+
+  '@oxlint-tsgolint/darwin-x64@7.0.2001':
+    optional: true
+
+  '@oxlint-tsgolint/linux-arm64@7.0.2001':
+    optional: true
+
+  '@oxlint-tsgolint/linux-x64@7.0.2001':
+    optional: true
+
+  '@oxlint-tsgolint/win32-arm64@7.0.2001':
+    optional: true
+
+  '@oxlint-tsgolint/win32-x64@7.0.2001':
     optional: true
 
   '@oxlint/binding-android-arm-eabi@1.81.0':
@@ -2402,11 +2459,20 @@ snapshots:
       '@oxfmt/binding-win32-ia32-msvc': 0.66.0
       '@oxfmt/binding-win32-x64-msvc': 0.66.0
 
-  oxlint-config-presets@0.1.19(oxlint@1.81.0):
+  oxlint-config-presets@0.1.19(oxlint@1.81.0(oxlint-tsgolint@7.0.2001)):
     optionalDependencies:
-      oxlint: 1.81.0
+      oxlint: 1.81.0(oxlint-tsgolint@7.0.2001)
 
-  oxlint@1.81.0:
+  oxlint-tsgolint@7.0.2001:
+    optionalDependencies:
+      '@oxlint-tsgolint/darwin-arm64': 7.0.2001
+      '@oxlint-tsgolint/darwin-x64': 7.0.2001
+      '@oxlint-tsgolint/linux-arm64': 7.0.2001
+      '@oxlint-tsgolint/linux-x64': 7.0.2001
+      '@oxlint-tsgolint/win32-arm64': 7.0.2001
+      '@oxlint-tsgolint/win32-x64': 7.0.2001
+
+  oxlint@1.81.0(oxlint-tsgolint@7.0.2001):
     optionalDependencies:
       '@oxlint/binding-android-arm-eabi': 1.81.0
       '@oxlint/binding-android-arm64': 1.81.0
@@ -2427,6 +2493,7 @@ snapshots:
       '@oxlint/binding-win32-arm64-msvc': 1.81.0
       '@oxlint/binding-win32-ia32-msvc': 1.81.0
       '@oxlint/binding-win32-x64-msvc': 1.81.0
+      oxlint-tsgolint: 7.0.2001
 
   p-limit@3.1.0:
     dependencies:
