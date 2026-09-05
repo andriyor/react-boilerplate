@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "preinstall": "node -e \"require('node:child_process').spawnSync('git',['config','core.hooksPath','git-hooks'])\"",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint --fix",
